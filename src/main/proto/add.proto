@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package add;
+option java_package = "com.proto.add";
+option java_multiple_files = true;
+
+message request{
+  int32 firstDigit = 1;
+  int32 secondDigit = 2;
+}
+message response{
+  int32 result = 1;
+}
+service add{
+  rpc add(request) returns (response);
+}
